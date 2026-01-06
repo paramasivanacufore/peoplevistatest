@@ -1,0 +1,75 @@
+/* Pulse animation for background shapes */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+.animate-pulse-slow,
+.animate-pulse-medium,
+.animate-pulse-fast,
+.animate-pulse-very-slow {
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.animate-pulse-slow {
+  animation: pulse 6s infinite ease-in-out;
+}
+
+.animate-pulse-medium {
+  animation: pulse 8s infinite ease-in-out;
+}
+
+.animate-pulse-fast {
+  animation: pulse 7s infinite ease-in-out;
+}
+
+.animate-pulse-very-slow {
+  animation: pulse 10s infinite ease-in-out;
+}
+
+/* Logo float animation */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-logo-float {
+  animation: logoFloat 6s infinite ease-in-out;
+}
+
+/* Login Component Animations - Panel transitions */
+.left-panel-lg {
+  transform: translateX(0);
+  transition: transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.login-panel-lg {
+  transition: opacity 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Mobile and Desktop sliding animation */
+.login-container.active .left-panel-lg {
+  transform: translateX(100%) !important;
+}
+
+.login-container.active .login-panel-lg {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.login-container.active .right-panel-lg {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

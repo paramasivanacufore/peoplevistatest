@@ -1,0 +1,130 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Import Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes float-word {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(3px) rotate(0.5deg);
+  }
+}
+
+.animate-float-word {
+  animation: float-word 10s ease-in-out infinite;
+}
+
+
+/* Custom base styles */
+@layer base {
+  html, body {
+    font-family: 'Segoe UI';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .text-form-label { 
+    color: rgba(19, 22, 30, 0.80);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .bg-people-blue {
+    background-color: #011748;
+  }
+  
+  .text-people-blue {
+    color: #1e3a8a;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Hide scrollbar for select dropdowns */
+  select.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  select.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+    width: 0;
+    height: 0;
+  }
+
+  /* Hide scrollbar for select option list (when dropdown is open) */
+  select option {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  select option::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+
+  /* Prevent black outline/highlight on SVG chart elements */
+  svg:focus {
+    outline: none;
+  }
+
+  svg *:focus {
+    outline: none;
+  }
+
+  /* Prevent text selection on chart elements */
+  .recharts-wrapper {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .recharts-wrapper:focus {
+    outline: none;
+  }
+}

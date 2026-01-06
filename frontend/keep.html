@@ -1,0 +1,44 @@
+ac_users
+   ↓ (PK user_id → emp_employee.user_id)
+emp_employee
+   ↓ (employee_id → department_roles.employee_id)
+department_roles
+   ↓ (role_id → roles.role_id)
+roles
+   ↓ (role_id → role_permissions.role_id)
+role_permissions
+   ↓ (permission_id → permissions.permission_id)
+permissions
+   ↓ (module_id → modules.module_id)
+modules
+
+
+We will quickly move to sidebar before module registration we need to show only accessible modules that we listed based on the roles and permission
+
+
+def get_user_by_login(login)
+SQL logic:
+
+Search by username OR email
+
+Join with emp_employee
+
+Join with department_roles to get role_level
+
+Join roles to get role_name
+
+
+def get_user_by_id(user_id)
+Same as login, used when session is verified.
+
+def get_user_permissions(employee_id)
+✔ 1. Get user’s departments
+✔ 2. Convert role levels → role_ids
+✔ 3. Get all base permissions (role_permissions)
+✔ 4. Get scoped permissions:
+
+Department scope
+
+Employee scope
+
+✔ 5. Merge with priority:
