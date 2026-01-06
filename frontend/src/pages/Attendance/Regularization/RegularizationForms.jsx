@@ -13,7 +13,7 @@ export default function RegularizationForm() {
 
     return (
         <DashboardLayout pageTitle="Regularization">
-            <RegularizationFormComponent 
+            <RegularizationFormComponent
                 employeeId={employeeId ? parseInt(employeeId) : 1}
                 onBack={handleBack}
             />
