@@ -6,7 +6,7 @@ import { FiEdit } from 'react-icons/fi';
 import { RiDeleteBin7Line } from 'react-icons/ri';
 import { leaveTypeAPI } from '../../utils/leaveType/apiUtils';
 import LeaveTypeForm from './LeaveTypeForm';
-import '../../Styles/tableDesign.css';
+import '../../styles/tableDesign.css';
 
 const LeaveTypeView = () => {
   /* ---------------- NAVIGATION / STATE ---------------- */

@@ -4,7 +4,7 @@ import { IoClose, IoMenu } from 'react-icons/io5';
 import { FiArrowLeft } from 'react-icons/fi';
 import { useAuth } from "../../context/AuthContext";
 import ProfileImage from "../../assets/images/imageicon1.png";
-import "../../Styles/tableDesign.css";
+import "../../styles/tableDesign.css";
 export default function Topbar({ pageTitle, onMenuClick }) {
     const navigate = useNavigate();
     const location = useLocation();

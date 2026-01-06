@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import WelcomePage from "./components/DashboardLayout/WelcomePage";
 import { Toaster } from "react-hot-toast";
 import DashboardLayout from "./components/DashboardLayout/DashboardLayout";
-import Branches from "./pages/branch/Branches";
-import Departments from "./pages/department/Departments";
-import Employees from "./pages/employee/Employees";
+import Branches from "./pages/Branch/Branches";
+import Departments from "./pages/Department/Departments";
+import Employees from "./pages/Employee/Employees";
 
 
 // attendance_module imports
@@ -45,7 +45,7 @@ import Companies from "./pages/Company/Companies";
 import RolesList from "./pages/Roles/RolesList";
 import Holidays from "./pages/Attendance/Holidays";
 import BiometricDevices from "./pages/Attendance/BiometricDevices";
-import EmployeeForm from "./pages/employee/EmployeeForm";
+import EmployeeForm from "./pages/Employee/EmployeeForm";
 
 function App() {
   return (

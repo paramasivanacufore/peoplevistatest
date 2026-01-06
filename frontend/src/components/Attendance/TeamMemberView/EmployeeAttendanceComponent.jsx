@@ -5,7 +5,7 @@ import { Calendar, Clock, Coffee, AlertCircle, Umbrella, CalendarDays, Zap, Refr
 import DataTable from '../../../components/Common/DataTable';
 import Papa from 'papaparse';
 import { getEmployeeAttendance } from '../../../utils/attendance/apiUtils';
-import '../../../Styles/tableDesign.css';
+import '../../../styles/tableDesign.css';
 
 export default function EmployeeAttendanceComponent({ employeeId, onBack }) {
   // Initialize with current month

@@ -4,7 +4,7 @@ import { MdCalendarToday, MdAccessTime, MdDescription, MdAttachMoney, MdVisibili
 import DataTable from '../../../components/Common/DataTable';
 import Papa from 'papaparse';
 import { getTeamAttendance, getTeamDepartments, getShifts } from '../../../utils/attendance/apiUtils';
-import '../../../Styles/tableDesign.css';
+import '../../../styles/tableDesign.css';
 
 export default function TeamMembersComponent({ onViewEmployee, onViewRegularization, onViewLeaveSummary, onViewLeaveBalance, onViewLeaveRequest }) {
     const [searchInput, setSearchInput] = useState(''); // Input value (updates immediately)

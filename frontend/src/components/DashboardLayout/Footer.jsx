@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Styles/tableDesign.css';
+import '../../styles/tableDesign.css';
 
 export default function Footer() {
     return (

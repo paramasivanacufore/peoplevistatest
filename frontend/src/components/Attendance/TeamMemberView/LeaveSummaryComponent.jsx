@@ -3,7 +3,7 @@ import { IoArrowBack, IoCalendarOutline, IoChevronDown } from 'react-icons/io5';
 import { Calendar, Coffee, AlertCircle, Umbrella, CalendarDays } from 'lucide-react';
 import { getLeaveSummary } from '../../../utils/attendance/apiUtils';
 import DataTable from '../../../components/Common/DataTable';
-import '../../../Styles/tableDesign.css';
+import '../../../styles/tableDesign.css';
 
 export default function LeaveSummaryComponent({ employeeId, onBack }) {
   const [loading, setLoading] = useState(false);
