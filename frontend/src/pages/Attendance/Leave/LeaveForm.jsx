@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import DashboardLayout from '../../../components/DashboardLayout/DashboardLayout';
-import LeaveFormComponent from '../../../components/Attendance/LeaveTemp/LeaveFormComponent';
+import LeaveFormComponent from '../../../components/Attendance/Leave/LeaveFormComponent';
 
 
 export default function LeaveForm() {

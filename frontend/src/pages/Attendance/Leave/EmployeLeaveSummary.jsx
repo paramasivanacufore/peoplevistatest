@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import DashboardLayout from '../../../components/DashboardLayout/DashboardLayout';
-import EmployeeLeaveComponent from '../../../components/Attendance/LeaveTemp/EmployeeLeaveComponent';
+import EmployeeLeaveComponent from '../../../components/Attendance/Leave/EmployeeLeaveComponent';
 
 export default function EmployeeLeaveSummary() {
     const { employeeId } = useParams();

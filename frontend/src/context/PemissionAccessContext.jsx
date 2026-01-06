@@ -12,10 +12,11 @@ export const PermissionProvider = ({ children }) => {
 
 const fetchPermissions = async () => {
   if (!user?.user_id) return; // wait until user is set
-
+  const backendUrl =
+        import.meta.env.VITE_API_local_Backend_URL || "http://localhost:8000";
   try {
     const res = await fetch(
-      `http://localhost:8000/auth/permissions?employee_id=${user.user_id}`,
+      `${backendUrl}/auth/permissions?employee_id=${user.user_id}`,
       {
         method: "GET",
         headers: {
