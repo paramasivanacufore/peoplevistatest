@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import DashboardLayout from '../../../components/DashboardLayout/DashboardLayout';
-import LeaveFormComponent from '../../../components/Attendance/leave/LeaveFormComponent';
+import LeaveFormComponent from '../../../components/Attendance/LeaveTemp/LeaveFormComponent';
+
 
 export default function LeaveForm() {
     const { employeeId } = useParams();
@@ -13,7 +14,7 @@ export default function LeaveForm() {
 
     return (
         <DashboardLayout pageTitle="Leave Request">
-            <LeaveFormComponent 
+            <LeaveFormComponent
                 employeeId={employeeId ? parseInt(employeeId) : 1}
                 onBack={handleBack}
             />
