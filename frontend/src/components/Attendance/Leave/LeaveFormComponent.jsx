@@ -266,6 +266,8 @@ import {
 export default function LeaveFormComponent({ onClose }) {
   const [leaveTypes, setLeaveTypes] = useState([]);
   const [loadingTypes, setLoadingTypes] = useState(true);
+  const backendUrl =
+  import.meta.env.VITE_API_local_Backend_URL || "http://localhost:8000";
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -283,7 +285,7 @@ export default function LeaveFormComponent({ onClose }) {
   useEffect(() => {
     const fetchLeaveTypes = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/leave/types");
+        const res = await fetch(`${backendUrl}/api/leave/types`);
         const data = await res.json();
         setLeaveTypes(data?.data || []);
         if (data?.data?.length > 0) {
@@ -341,7 +343,7 @@ export default function LeaveFormComponent({ onClose }) {
     };
 
     try {
-      await fetch("http://localhost:8000/api/leave/apply", {
+      await fetch(`${backendUrl}/api/leave/apply`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

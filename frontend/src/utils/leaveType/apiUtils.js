@@ -1,5 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000/api';
-
+const API_BASE_URL = `${import.meta.env.VITE_API_local_Backend_URL}/api`;
 // API utility functions for leave type management
 export const leaveTypeAPI = {
   // Get all leave types with optional filters

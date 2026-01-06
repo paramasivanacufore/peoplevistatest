@@ -1,5 +1,6 @@
-const API_BASE_URL = "http://localhost:8000/api";
-const AUTH_BASE_URL = "http://localhost:8000/auth";
+const API_BASE_URL = `${import.meta.env.VITE_API_local_Backend_URL}/api`;
+const AUTH_BASE_URL = `${import.meta.env.VITE_API_local_Backend_URL}/auth`;
+
 
 // Auth API
 export const authAPI = {

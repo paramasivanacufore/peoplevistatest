@@ -481,6 +481,8 @@ import "react-toastify/dist/ReactToastify.css";
 import * as formClasses from "../../../formClasses";
 
 export default function RegularizationFormComponent({ isOpen, onClose }) {
+    const backendUrl =
+  import.meta.env.VITE_API_local_Backend_URL || "http://localhost:8000";
   const today = new Date().toISOString().split("T")[0];
 
   const emptyRow = {
@@ -546,7 +548,7 @@ export default function RegularizationFormComponent({ isOpen, onClose }) {
     }));
 
     try {
-      const res = await fetch("http://localhost:8000/api/regularization/apply/multiple", {
+      const res = await fetch(`${backendUrl}/api/regularization/apply/multiple`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ requests: payload }),
